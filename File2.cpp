@@ -35,9 +35,10 @@ int main(){
     cout << "Testing Parameter passing" << endl;
     sub_two(i,j);
     cout << "The first is: " << i << " The Second is: " <<j << endl;
+    
     swp_ttwo(&ii,&jj);
     cout << "The first is: " << ii << " The Second is: " <<jj << endl;
-    cout << "Again, The first is: " << ii << " The Second is: " <<jj << endl;
+    
 
     cout << "End of Parameter passing test" << endl;
     
