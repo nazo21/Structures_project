@@ -1,6 +1,3 @@
-
-
-
 def sum_recur(n):
     if n > 0:
         return n + sum_recur(n - 1)
@@ -16,13 +13,17 @@ def ref_counter():
     else:
         print("It is not")
 
-def add_sum(n):
-    n += 1
+def new_list(mulist, num):
+	mulist.append(num)
+    
+
 
 
 if __name__ == "__main__":
     print(sum_recur(5))
     print(ref_counter())
-
+a_list = ["1","2","3","4"]
+new_list(a_list, "202")
+print(a_list)
 
     
