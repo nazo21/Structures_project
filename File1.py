@@ -10,10 +10,11 @@ def sum_recur(n):
 def ref_counter():  
     m = 29
     y = m
-  
+    #y +=1 if uncommented the ref count won't refer to the same obj
     if id(m) == id(y): 
        print("m and y refer to the same object") 
-    
+    else:
+        print("It is not")
 
 def add_sum(n):
     n += 1

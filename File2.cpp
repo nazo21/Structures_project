@@ -13,10 +13,11 @@ void sub_two(int i,int j) // Call by Value
      i -= j; // would be 1
 }
 
-void swp_ttwo(int *i,int *j) // Call by Reference
+void swp_ttwo(int &i,int &j) // Call by Reference
 {
-     
-     *i -= *j;
+     i = 10;
+     j = 4;
+     i -= j;
 }
 
 int sum(int n) {
@@ -28,19 +29,19 @@ int sum(int n) {
   }
 }
 int main(){
-    int i = 20;
+    int i = 21;
     int j = 9;
     int ii = 22;
-    int jj = 4;
+    int jj = 2;
     cout << "Testing Parameter passing" << endl;
-    sub_two(i,j);
+    sub_two(i,j); // Creates a Copy and orignal remains unchange
     cout << "The first is: " << i << " The Second is: " <<j << endl;
     
-    swp_ttwo(&ii,&jj);
+    swp_ttwo(ii,jj); // 
     cout << "The first is: " << ii << " The Second is: " <<jj << endl;
     
 
-    cout << "End of Parameter passing test" << endl;
+    cout << "End of Parameter passing " << endl;
     
     cout << "Testing Memory Managment" << endl;
     int *b; 
@@ -49,7 +50,7 @@ int main(){
     cout << b << endl; // Returns Memory Address
     
     delete b; // Ensure no memory Leak
-    cout << "End of Memory managment test test" << endl;
+    cout << "End of Memory managment" << endl;
 
     cout << "Start of Recursion" << endl;
     int recuring = sum(5);
